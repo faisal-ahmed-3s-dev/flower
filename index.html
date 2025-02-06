@@ -7,10 +7,11 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffd1ff, #ff9a9e);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       overflow: hidden;
+      position: relative;
     }
 
     @keyframes gradientBG {
@@ -23,64 +24,70 @@
       position: relative;
       transform-origin: center bottom;
       animation: flowerSway 6s ease-in-out infinite;
+      transform: scale(1.5);
     }
 
     .center {
-      width: 50px;
-      height: 50px;
-      background: radial-gradient(circle, #ff4757, #ff2d40);
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #ff6b81, #ff4757);
       border-radius: 50%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      box-shadow: 0 0 30px rgba(255, 71, 87, 0.7);
+      box-shadow: 0 0 40px rgba(255, 71, 87, 0.8);
       animation: pulse 2s infinite;
     }
 
     .petal {
       position: absolute;
-      width: 60px;
-      height: 60px;
-      background: linear-gradient(45deg, #ff6b81, #ff4757);
-      border-radius: 50% 50% 0 50%;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #ff8a9e, #ff4757);
+      border-radius: 100% 0;
       transform-origin: 0 0;
       animation: wave 3s infinite ease-in-out;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
     }
 
     .stem {
       position: absolute;
-      width: 10px;
-      height: 200px;
-      background: linear-gradient(to bottom, #27ae60, #2ecc71);
+      width: 15px;
+      height: 300px;
+      background: linear-gradient(to bottom, #2ecc71, #27ae60);
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: 5px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .leaf {
       position: absolute;
-      width: 40px;
-      height: 70px;
+      width: 60px;
+      height: 100px;
       background: linear-gradient(45deg, #2ecc71, #27ae60);
-      border-radius: 30px 0;
+      border-radius: 60px 0;
       transform: rotate(45deg);
-      left: 20px;
+      left: 30px;
       top: 50%;
       animation: leafWave 4s infinite ease-in-out;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .text {
       position: absolute;
       width: 100%;
       text-align: center;
-      top: -80px;
+      top: -120px;
       font-family: 'Arial', sans-serif;
-      font-size: 28px;
-      color: #e84393;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      font-size: 48px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff4757, #ff6b81);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
       animation: float 3s infinite ease-in-out;
     }
 
@@ -93,30 +100,45 @@
 
     .heart {
       position: absolute;
-      font-size: 20px;
+      font-size: 30px;
       color: #ff6b81;
       animation: floatingHeart 6s linear infinite;
       opacity: 0;
+      filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
     }
 
     .sparkle {
       position: absolute;
-      width: 4px;
-      height: 4px;
+      width: 6px;
+      height: 6px;
       background: white;
       border-radius: 50%;
       animation: sparkle 2s linear infinite;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
 
     .love-message {
       position: absolute;
-      bottom: 40px;
+      bottom: 60px;
       text-align: center;
       font-family: 'Arial', sans-serif;
-      font-size: 18px;
+      font-size: 32px;
+      font-weight: bold;
       color: #e84393;
       animation: glow 2s infinite;
       width: 100%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .secondary-message {
+      position: absolute;
+      bottom: 120px;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-size: 24px;
+      color: #ff6b81;
+      width: 100%;
+      animation: float 3s infinite ease-in-out;
     }
 
     @keyframes wave {
@@ -125,14 +147,14 @@
     }
 
     @keyframes pulse {
-      0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 20px rgba(255, 71, 87, 0.5); }
-      50% { transform: translate(-50%, -50%) scale(1.2); box-shadow: 0 0 40px rgba(255, 71, 87, 0.8); }
-      100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 20px rgba(255, 71, 87, 0.5); }
+      0% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 30px rgba(255, 71, 87, 0.6); }
+      50% { transform: translate(-50%, -50%) scale(1.2); box-shadow: 0 0 50px rgba(255, 71, 87, 0.9); }
+      100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 30px rgba(255, 71, 87, 0.6); }
     }
 
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(-2deg); }
-      50% { transform: translateY(-15px) rotate(2deg); }
+      50% { transform: translateY(-20px) rotate(2deg); }
     }
 
     @keyframes leafWave {
@@ -144,23 +166,23 @@
       0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
       10% { opacity: 1; }
       90% { opacity: 1; }
-      100% { transform: translate(var(--tx), -300px) rotate(var(--tr)); opacity: 0; }
+      100% { transform: translate(var(--tx), -400px) rotate(var(--tr)); opacity: 0; }
     }
 
     @keyframes sparkle {
       0% { transform: scale(0) rotate(0deg); opacity: 0; }
-      50% { transform: scale(1) rotate(180deg); opacity: 1; }
+      50% { transform: scale(1.5) rotate(180deg); opacity: 1; }
       100% { transform: scale(0) rotate(360deg); opacity: 0; }
     }
 
     @keyframes flowerSway {
-      0%, 100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
+      0%, 100% { transform: scale(1.5) rotate(-3deg); }
+      50% { transform: scale(1.5) rotate(3deg); }
     }
 
     @keyframes glow {
-      0%, 100% { text-shadow: 0 0 10px #ff6b81; }
-      50% { text-shadow: 0 0 20px #ff6b81, 0 0 30px #ff6b81; }
+      0%, 100% { text-shadow: 0 0 15px #ff6b81; }
+      50% { text-shadow: 0 0 30px #ff6b81, 0 0 40px #ff6b81; }
     }
   </style>
 </head>
@@ -175,49 +197,50 @@
       <div class="stem"></div>
       <div class="leaf"></div>
       
-      <!-- Creating 12 petals around the center for a fuller flower -->
-      <div class="petal" style="transform: rotate(0deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(30deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(60deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(90deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(120deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(150deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(180deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(210deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(240deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(270deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(300deg) translate(25px, 0)"></div>
-      <div class="petal" style="transform: rotate(330deg) translate(25px, 0)"></div>
+      <!-- Creating 16 petals for a fuller, more detailed flower -->
+      <div class="petal" style="transform: rotate(0deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(22.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(45deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(67.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(90deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(112.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(135deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(157.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(180deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(202.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(225deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(247.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(270deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(292.5deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(315deg) translate(40px, 0)"></div>
+      <div class="petal" style="transform: rotate(337.5deg) translate(40px, 0)"></div>
     </div>
-    <div class="love-message">With love and affection ✨</div>
+    <div class="secondary-message">Spreading love and joy ✨</div>
+    <div class="love-message">Forever & Always 💝</div>
   </div>
 
   <script>
-    // Add floating hearts
     function createHeart() {
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.innerHTML = '❤️';
       heart.style.left = Math.random() * 100 + '%';
-      heart.style.setProperty('--tx', (Math.random() * 200 - 100) + 'px');
+      heart.style.setProperty('--tx', (Math.random() * 300 - 150) + 'px');
       heart.style.setProperty('--tr', (Math.random() * 360) + 'deg');
       document.querySelector('.hearts-container').appendChild(heart);
       
-      // Remove heart after animation
       setTimeout(() => {
         heart.remove();
       }, 6000);
     }
 
-    // Create hearts periodically
     setInterval(createHeart, 300);
 
-    // Add sparkles around the flower
     function createSparkle() {
       const sparkle = document.createElement('div');
       sparkle.className = 'sparkle';
       const angle = Math.random() * Math.PI * 2;
-      const radius = 80 + Math.random() * 40;
+      const radius = 120 + Math.random() * 60;
       const x = Math.cos(angle) * radius;
       const y = Math.sin(angle) * radius;
       
@@ -231,7 +254,6 @@
       }, 2000);
     }
 
-    // Create sparkles periodically
     setInterval(createSparkle, 200);
   </script>
 </body>
